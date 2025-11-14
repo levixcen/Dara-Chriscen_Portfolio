@@ -3,188 +3,320 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dara Chriscen // Portfolio</title>
-    <link href="./css/style.css" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Tenor+Sans&family=Lora:ital,wght@1,400&display=swap" rel="stylesheet">
-    <style>
-        /* Custom Styles for Subtle Effects (Defined in CSS output for deployment) */
-        .glass-effect {
-            backdrop-filter: blur(8px); 
-            -webkit-backdrop-filter: blur(8px);
+    <title>Dara Chriscen Cyber Portfolio</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        mono: ['"Fira Code"', 'monospace'],
+                    },
+                }
+            }
         }
-        /* Uses theme('colors') from tailwind.config.js (Fuchsia & Teal) */
-        .text-glow-soft {
-             text-shadow: 0 0 5px #FF00FF, 0 0 10px #8DD0CE; 
-        }
-    </style>
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+    
 </head>
+<body class="font-sans min-h-screen">
 
-<body class="bg-cyber-green-dark text-pale-glow font-mono">
+  
 
-    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <div class="flex-shrink-0">
-                    <a href="#home" class="text-xl font-sans font-extrabold tracking-widest text-pale-glow hover:text-lavender-pink transition duration-300">
-                        <span class="text-lavender-pink text-glow-soft"></span> DARA CHRISCEN
+    <div class="relative z-10 min-h-screen" style="background-color: rgba(34, 34, 34, 0.70);">
+
+        <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-end h-16">
+                    <div class="flex items-baseline space-x-4 font-bold font-mono">
+                        <a href="#home" class="text-mystic-teal hover:text-lavender-pink transition duration-300 uppercase">home</a>
+                        <a href="#about" class="text-mystic-teal hover:text-lavender-pink transition duration-300 uppercase">about</a>
+                        <a href="#skills" class="text-mystic-teal hover:text-lavender-pink transition duration-300 uppercase">skills</a>
+                        <a href="#projects" class="text-mystic-teal hover:text-lavender-pink transition duration-300 uppercase">projects</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+       <section id="home" class="home-aura min-h-screen flex items-center justify-center p-4 lg:p-8 text-center">
+    <div class="relative z-20 max-w-4xl mx-auto">
+        <h1 class="text-6xl lg:text-8xl font-extrabold mb-4 text-white uppercase tracking-wider title-shadow" style="text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);">DARA CHRISCEN</h1>
+        <h2 class="text-xl lg:text-2xl font-light text-mystic-teal mb-2">Computer Science Student / Cybersecurity Enthusiast</h2>
+        
+        <div class="flex justify-center mt-8">
+            <a href="#projects" class="px-8 py-2 rounded-full font-mono text-lg italic font-bold active:scale-[0.98] text-gold transition duration-300 hover:bg-gold/10">
+                View Projects →
+            </a>
+        </div>
+    </div>
+</section>
+
+        <section id="about" class="py-20 lg:py-32 px-4 lg:px-8">
+            <div class="max-w-6xl mx-auto">
+                <h3 class="text-4xl font-extrabold mb-10 text-gold text-center text-glow-none">ABOUT ME</h3>
+
+                <div class="glass-effect p-8 rounded-xl shadow-lg border-2 border-[var(--color-lavender-pink)] border-opacity-70" style="background-color: rgba(43, 43, 43, 0.3);">
+                    <div class="flex flex-col md:flex-row gap-8 items-center">
+                        <div class="w-full md:w-1/3 flex justify-center">
+                           
+                            <div class="w-64 h-80 rounded-xl border border-white shadow-2xl overflow-hidden bg-background">
+    <img 
+        src="Dara_Linkedin2025.jpg" 
+        alt="Dara Chriscen Profile Photo" 
+        class="w-full h-full object-cover"
+    />
+</div>
+                        </div>
+
+
+                        <div class="w-full md:w-2/3">
+                            <p class="text-lg mb-6 leading-relaxed font-mono">
+                                <span class="text-gold font-bold">Dara Chriscen</span>, a Cyber Security Enthusiast and Computer Science Student focused on <span class="text-lavender-pink font-semibold">Software Security, Network Forensics, and Secure Programming</span>.
+                            </p>
+                            <p class="text-lg mb-8 leading-relaxed font-mono">
+                                I approach the digital world not just as a system to be maintained, but a complex reality to be
+                                <span class="text-lavender-pink font-semibold">decoded and re-engineered</span>. Check out the tools I can use in the <span class="font-bold">Skills</span> section.
+                            </p>
+
+                            <div class="flex flex-wrap gap-4">
+                                <a
+                                    href="/Users/daradeborah/Documents/WEB_PORTFOLIO/CV ATS Dara Chriscen.docx"
+                                    download
+                                    class="px-4 py-2 rounded-md border text-lavender-pink hover:bg-lavender-pink/20 transition duration-300"
+                                    style="border-color: var(--color-lavender-pink);"
+                                >
+                                    Download Resume
+                                </a>
+                                <a
+                                    href="https://github.com/levixcen"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="px-4 py-2 rounded-md border text-mystic-teal hover:bg-mystic-teal/20 transition duration-300"
+                                    style="border-color: var(--color-terminal-green);"
+                                >
+                                    View GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-20 lg:py-32 px-4 lg:px-8" style="background-color: rgba(43, 43, 43, 0.65);">
+            <div class="max-w-6xl mx-auto">
+                <h3 class="text-4xl font-extrabold mb-12 text-mystic-teal text-center text-glow-none">SKILLS</h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 font-mono">
+                    <div class="glass-effect p-6 rounded-lg border border-mystic-teal/50 transition duration-300 hover:border-lavender-pink/70 hover:shadow-2xl hover:shadow-teal" style="background-color: rgba(26, 26, 26, 0.4);">
+                        <h4 class="text-xl font-bold mb-4 text-gold border-b border-[var(--color-terminal-green)] border-opacity-30 pb-2">Languages</h4>
+                        <ul class="space-y-2 text-pale-glow font-mono">
+                            <li>Python</li>
+                            <li>Bash/Shell</li>
+                            <li>C++</li>
+                            <li>JavaScript</li>
+                            <li>SQL (Database)</li>
+                            <li>Java</li>
+                            <li>HTML,CSS</li>
+                        </ul>
+                    </div>
+                    <div class="glass-effect p-6 rounded-lg border border-mystic-teal/50 transition duration-300 hover:border-lavender-pink/70 hover:shadow-2xl hover:shadow-teal" style="background-color: rgba(26, 26, 26, 0.4);">
+                        <h4 class="text-xl font-bold mb-4 text-gold border-b border-[var(--color-terminal-green)] border-opacity-30 pb-2">Operating Systems</h4>
+                        <ul class="space-y-2 text-pale-glow font-mono">
+                            <li>Kali Linux</li>
+                            <li>Ubuntu/Debian</li>
+                            <li>Windows Server</li>
+                            <li>macOS Environment</li>
+                            <li>Virtualization (VMware/VirtualBox)</li>
+                        </ul>
+                    </div>
+                    <div class="glass-effect p-6 rounded-lg border border-mystic-teal/50 transition duration-300 hover:border-lavender-pink/70 hover:shadow-2xl hover:shadow-teal" style="background-color: rgba(26, 26, 26, 0.4);">
+                        <h4 class="text-xl font-bold mb-4 text-gold border-b border-[var(--color-terminal-green)] border-opacity-30 pb-2">Tools</h4>
+                        <ul class="space-y-2 text-pale-glow font-mono">
+                            <li>Wireshark</li>
+                            <li>Burp Suite</li>
+                            <li>FTK Imager</li>
+                            <li>Kali Linux</li>
+                            <li>Cisco Packet Tracer</li>
+                            <li>Ganache</li>
+                            <li>MetaMask</li>
+                            <li>Docker</li>
+                        </ul>
+                    </div>         
+                    <div class="glass-effect p-6 rounded-lg border border-mystic-teal/50 transition duration-300 hover:border-lavender-pink/70 hover:shadow-2xl hover:shadow-teal col-span-1 md:col-span-2 lg:col-span-1" style="background-color: rgba(26, 26, 26, 0.4);">
+                        <h4 class="text-xl font-bold mb-4 text-gold border-b border-[var(--color-terminal-green)] border-opacity-30 pb-2">Concepts</h4>
+                        <ul class="space-y-2 text-pale-glow font-mono">
+                            <li>Computer Forensic</li>
+                            <li>Blockchain Fundamentals</li>
+                            <li>Server and Network Administration</li>
+                            <li>Penetration Testing</li>
+                            <li>Software Security</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-20 lg:py-32 px-4 lg:px-8">
+    <div class="max-w-6xl mx-auto">
+        <h3 class="text-4xl font-extrabold mb-12 text-lavender-pink text-center">PROJECTS</h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div class="glass-effect p-6 rounded-lg border border-lavender-pink/50 transition duration-300 hover:border-mystic-teal/70 hover:shadow-2xl hover:shadow-lavender">
+                <h4 class="text-2xl font-bold mb-2 text-gold">IT Division Evocation 2025</h4>
+                <p class="text-sm font-mono italic mb-3 text-mystic-teal">Role: Team Member and Associate</p>
+                <p class="text-pale-glow mb-4 text-base">Supported event IT operations, handled troubleshooting, and ensured stable platform performance throughout the <b>ECOVATION 2025</b> competition. Maintained system availability and responded to user issues during critical activity periods.</p>
+                <div class="flex flex-wrap gap-2 text-xs mb-4">
+                    <span class="px-3 py-1 text-sm font-semibold rounded-full text-lavender-pink" style="background-color: rgba(186,156,228,0.15);">IT Support</span>
+                    <span class="px-3 py-1 text-sm font-semibold rounded-full text-lavender-pink" style="background-color: rgba(186,156,228,0.15);">System Administration</span>
+                </div>
+            </div>
+
+           
+            <div class="glass-effect p-6 rounded-lg border border-lavender-pink/50 transition duration-300 hover:border-mystic-teal/70 hover:shadow-2xl hover:shadow-lavender">
+                <h4 class="text-2xl font-bold mb-2 text-gold">Database Technology Project</h4>
+                <p class="text-sm font-mono italic mb-3 text-mystic-teal">Data Modeling & SQL</p>
+                <p class="text-pale-glow mb-4 text-base">Refined an existing <b>Entity Relationship (ER) diagram</b> by restructuring entities, clarifying relationships, and improving overall data modeling consistency for implementation readiness.</p>
+                <div class="flex flex-wrap gap-2 text-xs mb-4">
+                    <span class="px-3 py-1 text-sm font-semibold rounded-full text-lavender-pink" style="background-color: rgba(186,156,228,0.15);">phpMyAdmin</span>
+                </div>
+                <a href="https://drive.google.com/drive/folders/1Uy8cgO6krd5VeU_sk--97OnVbKUGoIBC?hl=id" target="_blank" rel="noopener noreferrer" class="block btn-primary px-4 py-2 rounded-full font-semibold text-center italic active:scale-[0.98] mt-auto">
+                    View Documentation →
+                </a>
+            </div>
+            
+    
+            <div class="glass-effect p-6 rounded-lg border border-lavender-pink/50 transition duration-300 hover:border-mystic-teal/70 hover:shadow-2xl hover:shadow-lavender">
+                <h4 class="text-2xl font-bold mb-2 text-gold">Computer Networks</h4>
+                <p class="text-sm font-mono italic mb-3 text-mystic-teal">Network Design & Configuration</p>
+                <p class="text-pale-glow mb-4 text-base">Designed and configured a complete <b>network layout</b> for one campus level using <b>Cisco Packet Tracer</b>, including routing, switching, and subnetting to simulate a functional operational environment.</p>
+                <div class="flex flex-wrap gap-2 text-xs mb-4">
+                    <span class="px-3 py-1 text-sm font-semibold rounded-full text-lavender-pink" style="background-color: rgba(186,156,228,0.15);">Cisco Packet Tracer</span>
+                </div>
+                <a href="https://drive.google.com/drive/folders/1Uy8cgO6krd5VeU_sk--97OnVbKUGoIBC?hl=id" target="_blank" rel="noopener noreferrer" class="block btn-primary px-4 py-2 rounded-full font-semibold text-center italic active:scale-[0.98] mt-auto">
+                    View Documentation →
+                </a>
+            </div>
+
+
+            <div class="glass-effect p-6 rounded-lg border border-lavender-pink/50 transition duration-300 hover:border-mystic-teal/70 hover:shadow-2xl hover:shadow-lavender">
+                <h4 class="text-2xl font-bold mb-2 text-gold">Mobile Penetration Testing for Jackal Holidays</h4>
+                <p class="text-sm font-mono italic mb-3 text-mystic-teal">Application Security Testing</p>
+                <p class="text-pale-glow mb-4 text-base">Performed security testing on the <b>Jackal Holidays mobile application</b>, assessing vulnerabilities in requests, authentication flows, and API interactions to identify potential exploitation vectors.</p>
+                <div class="flex flex-wrap gap-2 text-xs mb-4">
+                    <span class="px-3 py-1 text-sm font-semibold rounded-full text-lavender-pink" style="background-color: rgba(186,156,228,0.15);">Kali Linux</span>
+                    <span class="px-3 py-1 text-sm font-semibold rounded-full text-lavender-pink" style="background-color: rgba(186,156,228,0.15);">Burp Suite</span>
+                </div>
+                <a href="https://drive.google.com/drive/folders/1Uy8cgO6krd5VeU_sk--97OnVbKUGoIBC?hl=id" target="_blank" rel="noopener noreferrer" class="block btn-primary px-4 py-2 rounded-full font-semibold text-center italic active:scale-[0.98] mt-auto">
+                    View Documentation →
+                </a>
+            </div>
+            
+            
+            <div class="glass-effect p-6 rounded-lg border border-lavender-pink/50 transition duration-300 hover:border-mystic-teal/70 hover:shadow-2xl hover:shadow-lavender">
+                <h4 class="text-2xl font-bold mb-2 text-gold">Software Engineering Security Scanning Website</h4>
+                <p class="text-sm font-mono italic mb-3 text-mystic-teal">Automated Security Testing (SAST/DAST)</p>
+                <p class="text-pale-glow mb-4 text-base">Built a website capable of automated security scanning through <b>SAST, DAST, SCA, container scanning</b>, and Infrastructure-as-Code (IaC) validation. Included basic infrastructure risk assessment for servers.</p>
+                <div class="flex flex-wrap gap-2 text-xs mb-4">
+                    <span class="px-3 py-1 text-sm font-semibold rounded-full text-lavender-pink" style="background-color: rgba(186,156,228,0.15);">Web Frameworks</span>
+                    <span class="px-3 py-1 text-sm font-semibold rounded-full text-lavender-pink" style="background-color: rgba(186,156,228,0.15);">SAST/DAST Tools</span>
+                    <span class="px-3 py-1 text-sm font-semibold rounded-full text-lavender-pink" style="background-color: rgba(186,156,228,0.15);">IaC Validation</span>
+                </div>
+                <a href="https://drive.google.com/drive/folders/1Uy8cgO6krd5VeU_sk--97OnVbKUGoIBC?hl=id" target="_blank" rel="noopener noreferrer" class="block btn-primary px-4 py-2 rounded-full font-semibold text-center italic active:scale-[0.98] mt-auto">
+                    View Documentation →
+                </a>
+            </div>
+
+            <div class="glass-effect p-6 rounded-lg border border-lavender-pink/50 transition duration-300 hover:border-mystic-teal/70 hover:shadow-2xl hover:shadow-lavender">
+                <h4 class="text-2xl font-bold mb-2 text-gold">AI Project</h4>
+                <p class="text-sm font-mono italic mb-3 text-mystic-teal">Computer Vision & Machine Learning</p>
+                <p class="text-pale-glow mb-4 text-base">Developed an image-based <b>AI model</b> that identifies fish species from scanned images using supervised learning, demonstrating proficiency in computer vision and dataset management.</p>
+                <div class="flex flex-wrap gap-2 text-xs mb-4">
+                    <span class="px-3 py-1 text-sm font-semibold rounded-full text-lavender-pink" style="background-color: rgba(186,156,228,0.15);">Python</span>
+                    <span class="px-3 py-1 text-sm font-semibold rounded-full text-lavender-pink" style="background-color: rgba(186,156,228,0.15);">TensorFlow/PyTorch</span>
+                    <span class="px-3 py-1 text-sm font-semibold rounded-full text-lavender-pink" style="background-color: rgba(186,156,228,0.15);">OpenCV</span>
+                </div>
+                <a href="https://drive.google.com/drive/folders/1Uy8cgO6krd5VeU_sk--97OnVbKUGoIBC?hl=id" target="_blank" rel="noopener noreferrer" class="block btn-primary px-4 py-2 rounded-full font-semibold text-center italic active:scale-[0.98] mt-auto">
+                    View Documentation →
+                </a>
+            </div>
+
+            
+            <div class="glass-effect p-6 rounded-lg border border-lavender-pink/50 transition duration-300 hover:border-mystic-teal/70 hover:shadow-2xl hover:shadow-lavender">
+                <h4 class="text-2xl font-bold mb-2 text-gold">Research: Z Score Based Fake Client Detection in Federated Learning</h4>
+                <p class="text-sm font-mono italic mb-3 text-mystic-teal">Data Science & Anomaly Detection</p>
+                <p class="text-pale-glow mb-4 text-base">Studied anomaly detection in federated learning by comparing CNN with Adam and MLP with multiple optimizers to evaluate accuracy and detection reliability for security research.</p>
+                <div class="flex flex-wrap gap-2 text-xs mb-4">
+                    <span class="px-3 py-1 text-sm font-semibold rounded-full text-lavender-pink" style="background-color: rgba(186,156,228,0.15);">Python</span>
+                    <span class="px-3 py-1 text-sm font-semibold rounded-full text-lavender-pink" style="background-color: rgba(186,156,228,0.15);">PyTorch/TensorFlow</span>
+                    <span class="px-3 py-1 text-sm font-semibold rounded-full text-lavender-pink" style="background-color: rgba(186,156,228,0.15);">NumPy/Pandas</span>
+                </div>
+                <a href="https://drive.google.com/drive/folders/1Uy8cgO6krd5VeU_sk--97OnVbKUGoIBC?hl=id" target="_blank" rel="noopener noreferrer" class="block btn-primary px-4 py-2 rounded-full font-semibold text-center italic active:scale-[0.98] mt-auto">
+                    View Documentation →
+                </a>
+            </div>
+
+
+            <div class="glass-effect p-6 rounded-lg border border-lavender-pink/50 transition duration-300 hover:border-mystic-teal/70 hover:shadow-2xl hover:shadow-lavender">
+                <h4 class="text-2xl font-bold mb-2 text-gold">Chat Application Security Risk Analysis</h4>
+                <p class="text-sm font-mono italic mb-3 text-mystic-teal">Security Architecture Modeling</p>
+                <p class="text-pale-glow mb-4 text-base">Conducted a comprehensive security risk analysis for a modern chat application. This involved applying strategic risk management principles: Avoidance (for unsafe file types), Mitigation (for NSFW content), Acceptance (for digital traceability concerns), and Transfer (for payment processing). This work was crucial in building a robust security architecture model.</p>
+                <div class="flex flex-wrap gap-2 text-xs mb-4">
+                    <span class="px-3 py-1 text-sm font-semibold rounded-full text-lavender-pink" style="background-color: rgba(186,156,228,0.15);">Risk Management Framework</span>
+                    <span class="px-3 py-1 text-sm font-semibold rounded-full text-lavender-pink" style="background-color: rgba(186,156,228,0.15);">Security Analysis</span>
+                </div>
+                <a href="https://drive.google.com/drive/folders/1Uy8cgO6krd5VeU_sk--97OnVbKUGoIBC?hl=id" target="_blank" rel="noopener noreferrer" class="block btn-primary px-4 py-2 rounded-full font-semibold text-center italic active:scale-[0.98] mt-auto">
+                    View Documentation →
+                </a>
+            </div>
+
+
+            <div class="glass-effect p-6 rounded-lg border border-lavender-pink/50 transition duration-300 hover:border-mystic-teal/70 hover:shadow-2xl hover:shadow-lavender">
+                <h4 class="text-2xl font-bold mb-2 text-gold">picoCTF Writeups and Challenges</h4>
+                <p class="text-sm font-mono italic mb-3 text-mystic-teal">Offensive & Defensive Security</p>
+                <p class="text-pale-glow mb-4 text-base">A portfolio of technical writeups detailing successful exploits and methodologies used to solve various Capture The Flag (CTF) challenges across cryptography, web exploitation, reverse engineering, and forensics domains. This demonstrates practical skills in offensive and defensive security.</p>
+                <div class="flex flex-wrap gap-2 text-xs mb-4">
+                    <span class="px-3 py-1 text-sm font-semibold rounded-full text-lavender-pink" style="background-color: rgba(186,156,228,0.15);">Kali Linux</span>
+                    <span class="px-3 py-1 text-sm font-semibold rounded-full text-lavender-pink" style="background-color: rgba(186,156,228,0.15);">Ghidra</span>
+                    <span class="px-3 py-1 text-sm font-semibold rounded-full text-lavender-pink" style="background-color: rgba(186,156,228,0.15);">Wireshark</span>
+                </div>
+                <a href="https://drive.google.com/drive/folders/1Uy8cgO6krd5VeU_sk--97OnVbKUGoIBC?hl=id" target="_blank" rel="noopener noreferrer" class="block btn-primary px-4 py-2 rounded-full font-semibold text-center italic active:scale-[0.98] mt-auto">
+                    View Documentation →
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <footer id="contact-footer" class="bg-card border-t-2 border-[var(--color-terminal-green)] border-opacity-50 py-10"> 
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h4 class="text-2xl font-bold mb-4 text-mystic-teal">More about me</h4>
+                <p class="font-mono mb-6 text-pale-glow/70">Send your encrypted messages or collaboration proposals here.</p>
+
+                <div class="flex justify-center space-x-6">
+                    <a href="mailto:darachriscen@gmail.com" class="text-3xl text-lavender-pink hover:text-mystic-teal transition duration-300" aria-label="Email">
+                        <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/dara-chriscen" target="_blank" rel="noopener noreferrer" class="text-3xl text-lavender-pink hover:text-mystic-teal transition duration-300" aria-label="LinkedIn">
+                        <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                    </a>
+                    <a href="https://github.com/levixcen" target="_blank" rel="noopener noreferrer" class="text-3xl text-lavender-pink hover:text-mystic-teal transition duration-300" aria-label="GitHub">
+                        <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87c0-1.39-0.75-2.22-1.92-2.76 3.01-0.33 6.14-1.46 6.14-6.29 0-1.41-0.48-2.56-1.28-3.46 0.14-0.34 0.52-1.66-0.12-3.44 0 0-1.04-0.35-3.41 1.34-0.99-0.27-2.05-0.4-3.13-0.4s-2.14 0.13-3.13 0.4c-2.37-1.7-3.41-1.34-3.41-1.34-0.64 1.78-0.26 3.1-0.12 3.44-0.8 0.9-1.28 2.05-1.28 3.46 0 4.83 3.13 5.96 6.14 6.29-0.41 0.23-0.78 0.88-0.9 1.94v3.87"/></svg>
                     </a>
                 </div>
 
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-4 font-sans font-bold">
-                        <a href="#home" class="nav-link text-lavender-pink hover:text-mystic-teal transition duration-300">HOME</a>
-                        <a href="#about" class="nav-link text-lavender-pink hover:text-mystic-teal transition duration-300">ABOUT</a>
-                        <a href="#skills" class="nav-link text-lavender-pink hover:text-mystic-teal transition duration-300">SKILLS</a>
-                        <a href="#projects" class="nav-link text-lavender-pink hover:text-mystic-teal transition duration-300">PROJECTS</a>
-                    </div>
-                </div>
-
-                <div class="md:hidden">
-                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-lavender-pink hover:bg-cyber-green-mid focus:outline-none focus:ring-2 focus:ring-inset focus:ring-lavender-pink" aria-controls="mobile-menu" aria-expanded="false">
-                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
-                </div>
+                <p class="font-mono text-sm mt-8 text-gold">
+                    by Dara Chriscen
+                </p>
             </div>
-        </div>
-
-        <div class="md:hidden glass-effect bg-cyber-green-dark/90 hidden" id="mobile-menu">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 font-sans font-bold text-center">
-                <a href="#home" class="block px-3 py-2 rounded-md text-pale-glow hover:bg-cyber-green-mid hover:text-mystic-teal">HOME</a>
-                <a href="#about" class="block px-3 py-2 rounded-md text-pale-glow hover:bg-cyber-green-mid hover:text-mystic-teal">ABOUT</a>
-                <a href="#skills" class="block px-3 py-2 rounded-md text-pale-glow hover:bg-cyber-green-mid hover:text-mystic-teal">SKILLS</a>
-                <a href="#projects" class="block px-3 py-2 rounded-md text-pale-glow hover:bg-cyber-green-mid hover:text-mystic-teal">PROJECTS</a>
-            </div>
-        </div>
-    </nav>
-    <section id="home" class="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden">
-        <div class="absolute inset-0 opacity-20">
-            <div class="w-full h-full bg-cover bg-center" style="background-image: url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100\' height=\'100\'><rect width=\'100\' height=\'100\' fill=\'%230A2624\'/><circle cx=\'50\' cy=\'50\' r=\'1\' fill=\'%23143D3C\'/></svg>');"></div>
-            <div class="absolute inset-0 mix-blend-screen opacity-50" style="background: radial-gradient(circle at 10% 20%, #6F4F8A 0%, transparent 40%), radial-gradient(circle at 90% 80%, #FF00FF 0%, transparent 50%), radial-gradient(circle at 50% 50%, #8DD0CE 0%, transparent 60%);"></div>
-        </div>
-        
-        <div class="relative z-10 text-center px-4 max-w-4xl">
-    <p class="font-mono text-lg mb-4 text-link-glow tracking-widest">Portfolio of
-
-    </p>
-    <h1 class="font-sans font-extrabold text-5xl sm:text-7xl lg:text-8xl leading-tight mb-6 text-pale-glow">
-        <span class="text-lavender-pink text-glow-soft"></span> DARA CHRISCEN
-    </h1>
-    <h2 class="font-serif-dainty italic text-xl sm:text-2xl mb-8 text-mystic-teal text-glow-soft">
-        Cyber Security Enthusiast | Computer Science Student
-    </h2>
-    
-    <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-        <a href="#projects" class="font-serif-dainty italic font-extrabold px-8 py-3 rounded-full border-2 border-lavender-pink text-pale-glow bg-lavender-pink/10 hover:bg-lavender-pink/30 hover:shadow-lavender-pink transition duration-300 transform hover:scale-105">
-            View My Works 
-        </a>
-        <a href="#contact-footer" class="font-serif-dainty italic font-extrabold px-8 py-3 rounded-full border-2 border-mystic-teal text-mystic-teal hover:bg-mystic-teal/20 transition duration-300 transform hover:scale-105">
-            Connect on Frequency
-        </a>
+        </footer>
     </div>
-</div>
 
-    </section>
-    <section id="about" class="py-20 lg:py-32 px-4 lg:px-8">
-        <div class="max-w-6xl mx-auto">
-            <h3 class="text-4xl font-sans font-extrabold mb-10 text-lavender-pink text-center">ABOUT ME</h3>
-            
-            <div class="glass-effect bg-cyber-green-mid/50 p-8 rounded-xl shadow-lg border-2 border-lavender-pink/70">
-                <div class="flex flex-col md:flex-row gap-8 items-center">
-                    <div class="w-full md:w-1/3 flex justify-center">
-                        <div class="w-64 h-64 rounded-full border-4 border-mystic-teal shadow-2xl overflow-hidden bg-cyber-green-dark flex items-center justify-center">
-                            <span class="text-mystic-teal font-sans text-xl p-4 text-center">Your Image Here</span>
-                        </div>
-                    </div>
-
-                    <div class="w-full md:w-2/3">
-                        <p class="font-mono text-lg mb-6 leading-relaxed">
-                            <span class="text-link-glow font-extrabold">Dara Chriscen</span>, a Cyber Security Enthusiast and Computer Science Student,
-                             Computer Science student focused on Software Security, Network Forensics, and Secure Programming using Python. Check out the tools i can use in skills.
-            
-                        </p>
-                       
-                        <div class="flex flex-wrap gap-4">
-                            <a href="./resume/dara_chriscen_cv.pdf" download class="font-mono px-4 py-2 rounded-md border border-lavender-pink text-lavender-pink hover:bg-lavender-pink/20 transition duration-300">
-                                Download Resume
-                            </a>
-                            <a href="YOUR_GITHUB_URL" target="_blank" class="font-mono px-4 py-2 rounded-md border border-mystic-teal text-mystic-teal hover:bg-mystic-teal/20 transition duration-300">
-                                View GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-    </section>
-    <section id="skills" class="py-20 lg:py-32 px-4 lg:px-8 bg-cyber-green-mid">
-        <div class="max-w-6xl mx-auto">
-            <h3 class="text-4xl font-sans font-extrabold mb-10 text-mystic-teal text-center">SKILLS (MY ARSENAL)</h3>
-            <div class="text-center font-mono">
-                </div>
-        </div>
-    </section>
-    <section id="projects" class="py-20 lg:py-32 px-4 lg:px-8">
-        <div class="max-w-6xl mx-auto">
-            <h3 class="text-4xl font-sans font-extrabold mb-10 text-lavender-pink text-center">PROJECTS (NETWORK WEAVING)</h3>
-            <div class="text-center font-mono">
-                </div>
-        </div>
-    </section>
-    <footer id="contact-footer" class="bg-cyber-green-mid border-t-2 border-link-glow/50 py-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h4 class="font-sans text-2xl font-bold mb-4 text-mystic-teal">Connect on Frequency</h4>
-            <p class="font-mono mb-6 text-pale-glow/70">
-                Send your encrypted messages or collaboration proposals here.
-            </p>
-            
-            <div class="flex justify-center space-x-6">
-                <a href="mailto:youremail@domain.com" class="text-3xl text-lavender-pink hover:text-mystic-teal transition duration-300" aria-label="Email">
-                    <svg class="w-8 h-8 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                </a>
-                <a href="YOUR_LINKEDIN_URL" target="_blank" class="text-3xl text-lavender-pink hover:text-mystic-teal transition duration-300" aria-label="LinkedIn">
-                    <svg class="w-8 h-8 inline-block" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.965v16h4.965v-8.187c0-4.14 5.2-3.8 5.2 0v8.187h4.96v-10.935c0-5.787-6.891-5.637-7.925-2.617v-2.448z"/></svg>
-                </a>
-                <a href="YOUR_GITHUB_URL" target="_blank" class="text-3xl text-lavender-pink hover:text-mystic-teal transition duration-300" aria-label="GitHub">
-                    <svg class="w-8 h-8 inline-block" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.353 3.437 9.875 8.205 11.413.75.148 1.02-.343 1.02-.767 0-.376-.015-1.411-.022-2.775-3.327.724-4.02-1.55-4.02-1.55-.542-1.375-1.321-1.74-1.321-1.74-1.082-.74.083-.725.083-.725 1.203.085 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.303 3.495.998.108-.77.418-1.303.762-1.602-2.665-.302-5.466-1.332-5.466-5.93 0-1.31.469-2.379 1.236-3.22-.124-.303-.535-1.517.117-3.176 0 0 1.008-.322 3.3-.318 1.008-.145 2.062-.218 3.125-.218 1.063 0 2.117.073 3.125.218 2.292-.004 3.3 1.236 3.3 1.236.652 1.659.241 2.873.118 3.176.768.841 1.235 1.91 1.235 3.22 0 4.61-2.806 5.625-5.478 5.922.43.37.82.903.82 1.817 0 1.311-.012 2.378-.024 2.775 0 .428.267.919 1.028.765 4.771-1.536 8.2-6.06 8.2-11.413 0-6.627-5.374-12-12-12z"/></svg>
-                </a>
-            </div>
-
-            <p class="font-mono text-sm mt-8 text-pale-glow/50">
-                System Status: Secured | Coded with <span class="text-lavender-pink">✦</span> by Dara Chriscen
-            </p>
-        </div>
-    </footer>
-    <script>
-        // Smooth Scrolling Script
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Mobile Menu Toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-        
-        // Sticky Nav Bar Background Change
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                // Background change: Transparent glass to solid dark green
-                navbar.classList.add('bg-cyber-green-mid/95', 'shadow-2xl', 'glass-effect');
-            } else {
-                navbar.classList.remove('bg-cyber-green-mid/95', 'shadow-2xl', 'glass-effect');
-            }
-        });
-    </script>
-    
+    <script src="script.js"></script>
 </body>
 </html>
