@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700;900&family=Fira+Code:wght@400;600&family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&display=swap');
+
+:root{
+    --color-background: #222222;
+    --color-card: #2b2b2b;
+    --color-light-dark-box: #1a1a1a;
+    --color-pale-glow: #EDEDED;
+    --color-lavender-deep: #360454;
+    --color-lavender-pink: #ba9ce4;
+    --color-striking-purple: #df00ff;
+    --color-lavender-light: #d9c8f2;
+    /* Updated green color for fonts/UI: #6AE213 (between 8ace00 and 4af626) */
+    --color-terminal-green: #6AE213; 
+    --color-gold: #d3af37;
+    --color-link-glow: #6AE213;
+}
+
+
+@keyframes pulseColor {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-background);
+    color: var(--color-pale-glow);
+    font-family: 'Montserrat', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4 { font-family: 'Red Hat Display', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+
+.bg-background { background-color: var(--color-background); }
+.bg-card { background-color: var(--color-card); }
+.text-pale-glow { color: var(--color-pale-glow); }
+.text-lavender-pink { color: var(--color-lavender-pink); }
+.text-lavender-light { color: var(--color-lavender-light); }
+.text-lavender-deep { color: var(--color-lavender-deep); }
+.text-mystic-teal { color: var(--color-terminal-green); }
+.text-link-glow { color: var(--color-link-glow); }
+.text-gold { color: var(--color-gold); }
+
+.font-terminal { font-family: 'Fira Code', monospace; }
+
+.glass-effect {
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+.home-aura {
+    position: relative;
+    overflow: hidden; /* Ensures the large blurred gradient is contained */
+    z-index: 10;
+}
+
+.home-aura::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* Centers the large gradient area */
+    transform: translate(-50%, -50%);
+    width: 150vw; /* Covers more than the viewport */
+    height: 150vh; /* Covers more than the viewport */
+    pointer-events: none;
+    z-index: -1; /* Puts the aura behind the content */
+    opacity: 0.15; /* Subtle glow effect */
+    
+    /* Creating the purple and yellow/gold radial gradients */
+    background: 
+        radial-gradient(circle at 20% 20%, #BA9CE4 0%, transparent 35%), /* Lavender Pink */
+        radial-gradient(circle at 80% 80%, #FFD700 0%, transparent 35%); /* Gold */
+    
+    filter: blur(150px); /* Heavily blurred to make it an "aura" */
+}
+
+/* Ensure the background stays dark */
+body {
+    background-color: #030409;
+}
+.text-glow-strong, .text-glow-soft, .text-glow-none {
+    text-shadow: none !important;
+}
+
+.shadow-lavender { box-shadow: 0 4px 12px rgba(180,140,220,0.06); }
+.shadow-teal { box-shadow: 0 4px 12px rgba(57,255,20,0.03); }
+
+#navbar {
+    z-index: 50;
+}
+#navbar.scrolled {
+    z-index: 110; 
+    background-color: rgba(43,43,43,0.96);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.6);
+    backdrop-filter: blur(6px);
+}
+
+/* Button styles using the high-contrast original gold/green variables */
+.btn-primary {
+    border: 1px solid var(--color-gold);
+    background-color: rgba(211,175,55,0.06); 
+    color: var(--color-pale-glow);
+    transition: all 0.18s ease;
+    font-weight: 600;
+}
+.btn-primary:hover {
+    background-color: rgba(211,175,55,0.14);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(211,175,55,0.08);
+}
+
+.btn-outline {
+    border: 1px solid var(--color-terminal-green);
+    color: var(--color-terminal-green);
+    background: transparent;
+    transition: all 0.18s ease;
+    font-weight: 600;
+}
+.btn-outline:hover{
+    background-color: rgba(106, 226, 19, 0.06); /* Using the new green for hover bg */
+    transform: translateY(-2px);
+}
+
+* { box-sizing: border-box; }
+.border, .rounded-lg { border-radius: 10px; }
+.border-2 { border-width: 1px; } 
+
+
+
+h4 { font-weight: 700; }
+.grid .glass-effect { border-radius: 8px; border: 1px solid rgba(255,255,255,0.03); }
+/* The original class was on the span, which is why it was not working on the project tags. Removed the specificity issue: */
+.grid .px-2.py-1 { background-color: rgba(186,156,228,0.06); color: var(--color-lavender-pink); }
+
+footer { background-color: var(--color-card); color: var(--color-pale-glow); }
+
+@media (max-width: 768px) {
+    .text-5xl { font-size: 2rem; }
+    .text-4xl { font-size: 1.25rem; }
+}
+
+.rounded-full { border-radius: 9999px; }
+a:hover { opacity: 0.95; transform: none; transition: color 0.14s ease; }
