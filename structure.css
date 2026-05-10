@@ -1,0 +1,221 @@
+/* structure.css */
+@import url('style.css'); /* Import all your original variables and aesthetic styles */
+
+/* ============================================================
+   SINGLE-COLUMN RESTRUCTURE
+============================================================ */
+
+/* 1. Transform split-screen grid hero to single-column flex */
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Start from top of screen */
+  align-items: flex-start; /* Left-align all content */
+  padding: 5rem 2rem 4rem 10rem; /* lifted — content sits higher on screen */
+  grid-template-columns: none; /* Deactivate previous grid definitions */
+}
+
+/* 2. Style the new PDF-style Hero Text and Links */
+.hero-content {
+  text-align: left; /* Left-align text as requested in single column */
+  margin-left: 0; /* Remove centered alignment from original CSS */
+  max-width: none;
+}
+
+
+.hero-pdf-name {
+  font-family: var(--f-title); 
+  color: var(--text);
+  font-size: 1.5rem; 
+  line-height: 1.1;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  /* Apply the signature glow used in section headers */
+  text-shadow: 0 0 10px var(--red), 0 0 20px var(--red-glow); 
+}
+
+/* Ensure Portfolio also has a subtle glow to match */
+.hero-pdf-name span.portfolio-text {
+  display: block;
+  font-family: 'DotGothic16', sans-serif;
+  font-size: 8rem; 
+  margin-top: 0.5rem;
+  margin-bottom: 0.2rem;
+  letter-spacing: 0; 
+  text-shadow: 0 0 15px var(--purple-glow);
+}
+
+/* 3. Nav Links: Cleaned DotGothic font rule */
+.hero-pdf-links {
+  list-style: none;
+  font-family: 'DotGothic16', sans-serif;
+  font-size: 2rem;
+  margin-top: 6rem;
+}
+
+.hero-pdf-links li a {
+  text-decoration: none;
+  color: var(--text);
+  transition: opacity 0.3s ease;
+}
+
+.hero-pdf-links li a:hover {
+  color: var(--red);
+}
+.hero-dot-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Keep it behind the text[cite: 1] */
+  overflow: hidden;
+  opacity: 0.4; /* Subtle appearance[cite: 1] */
+}
+
+#dotCanvasHero {
+  width: 100%;
+  height: 100%;
+}
+
+nav {
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+  pointer-events: none; /* Prevent clicking hidden links */
+}
+
+nav.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* 4. Two-column grid: image left, text right */
+.about-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+/* 5. Image frame sits in the left column, naturally */
+.pic-frame {
+  align-self: start;
+  margin-bottom: 0;
+}
+
+/* pic-src display logic is handled entirely by style.css — no overrides here */
+
+/* Always hide canvas by default; JS adds canvas-ok only on success */
+#aboutDotCanvas {
+  display: none;
+}
+.pic-frame.canvas-ok #aboutDotCanvas {
+  display: block;
+}
+
+.about-text {
+  width: 100%;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+/* 1. Ensure the canvas is fixed and at the very bottom */
+#venusBgCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -3; /* Move it behind everything */
+  pointer-events: none;
+}
+
+/* 2. Body: solid dark — video covers it anyway. No background-attachment:fixed
+   (that property disables GPU tile caching and forces repaints on scroll) */
+body {
+  background: #050008 !important;
+}
+
+/* 3. Ensure sections don't have solid backgrounds */
+section, #skills, #projects, #cv, #tsec {
+  background: transparent !important;
+  position: relative;
+  z-index: 1; /* Keep content above the background */
+}
+
+/* 4. Lower the opacity of the hero-dot-bg so it doesn't block Venus */
+.hero-dot-bg {
+  z-index: -1;
+  opacity: 0.1; /* Lower this value to make Venus more visible */
+}
+/* bgVideoCanvas removed from DOM — video element is the direct background */
+
+/* All page content sits above video canvas (z:2) and gradient overlay (z:3) */
+#home, #about, #skills, #projects, #cv, #tsec, #contact, footer, .divider {
+  position: relative;
+  z-index: 4;
+}
+
+/* Nav keeps its own z-index:800 from style.css — do not flatten it here */
+nav {
+  z-index: 800;
+  justify-content: flex-end;
+}
+
+#venusBgCanvas { display: none; }
+
+/* ============================================================
+   HERO TEXT SHADOW / BACKDROP
+   Makes landing page text crisp and legible over the video.
+   The blur is 0 on the hero so text needs its own contrast layer.
+============================================================ */
+
+/* Wrap the hero content in a semi-transparent shadow box */
+#home .hero-content {
+  position: relative;
+  padding: 2.5rem 3rem 2.5rem 3rem;
+  border-radius: 16px;
+  /* Deep multi-layer text backdrop */
+  background: radial-gradient(
+    ellipse at 30% 40%,
+    rgba(5, 0, 8, 0.72) 0%,
+    rgba(5, 0, 8, 0.45) 60%,
+    transparent 100%
+  );
+}
+
+/* Strong drop-shadow on the main name heading */
+#home .hero-pdf-name {
+  text-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.95),
+    0 0 30px rgba(255, 0, 60, 0.35),
+    0 0 60px rgba(0, 0, 0, 0.8);
+}
+
+/* Strong drop-shadow on the large "Portfolio" word */
+#home .hero-pdf-name .portfolio-text {
+  text-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.95),
+    0 0 40px rgba(157, 0, 255, 0.4),
+    0 0 80px rgba(0, 0, 0, 0.9);
+}
+
+/* Shadow on the nav links list in the hero */
+#home .hero-pdf-links li a {
+  text-shadow:
+    0 2px 10px rgba(0, 0, 0, 0.98),
+    0 0 20px rgba(0, 0, 0, 0.85);
+}
+
+#home .hero-pdf-links li a:hover {
+  text-shadow:
+    0 0 12px var(--red),
+    0 2px 10px rgba(0, 0, 0, 0.98);
+}
