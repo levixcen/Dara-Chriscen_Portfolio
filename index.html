@@ -27,6 +27,13 @@
       opacity: 0 !important;
       pointer-events: none !important;
     }
+    /* Suppress native video controls/play button on all browsers */
+    #bgVideo::-webkit-media-controls,
+    #bgVideo::-webkit-media-controls-enclosure,
+    #bgVideo::-webkit-media-controls-panel,
+    #bgVideo::-webkit-media-controls-play-button { display:none !important; }
+    #bgVideo { pointer-events:none; }
+
     /* Canvas display size is set by JS directly */
     #aboutDotCanvas {
       display: block;
@@ -492,15 +499,8 @@
       URL.revokeObjectURL(url);
     };
   })();
-  document.addEventListener("DOMContentLoaded", async () => {
-  const video = document.getElementById("bgVideo");
-
-  try {
-    await video.play();
-  } catch (err) {
-    console.log("Autoplay blocked:", err);
-  }
-});
+  // Video autoplay is handled by HTML attributes (autoplay muted playsinline)
+  // No JS needed — video.play() via JS can trigger browser autoplay blocks on mobile
 </script>
 
 </body>
