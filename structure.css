@@ -124,9 +124,13 @@ nav.visible {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
+
+  .pic-frame {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 
-/* 1. Ensure the canvas is fixed and at the very bottom */
 #venusBgCanvas {
   position: fixed;
   top: 0;
@@ -233,17 +237,17 @@ nav {
   }
 
   .hero-pdf-name {
-    font-size: 1rem;
+    font-size: 1.6rem;
     letter-spacing: 1px;
   }
 
   .hero-pdf-name span.portfolio-text {
-    font-size: 3.5rem;
+    font-size: 5.6rem;
   }
 
   .hero-pdf-links {
-    font-size: 1.2rem;
-    margin-top: 2rem;
+    font-size: 1.9rem;
+    margin-top: 2.5rem;
   }
 
   /* Fix navbar */
@@ -268,3 +272,22 @@ nav {
     display: none;
   }
 }
+/* Mobile-only PC recommendation */
+
+.mobile-pc-note {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-pc-note {
+    display: block;
+    font-family: var(--f-mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+
+    margin-bottom: 1rem;
+  }
+}
+
